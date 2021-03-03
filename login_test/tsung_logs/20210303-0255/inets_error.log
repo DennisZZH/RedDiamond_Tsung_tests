@@ -1,9 +1,0 @@
-[03/Mar/2021:02:55:49 -0000] access to /favicon.ico failed for 68.6.101.116, reason: 
-"httpd_file: Can't access /home/ec2-user/.tsung/log/20210303-0255/favicon.ico: File not found"
-[03/Mar/2021:02:55:49 -0000], Server: tsung_controller, Protocol: HTTP, Transport: TCP, URI: /favicon.ico, Host: 172.31.61.231:8091, Peer: 68.6.101.116:59102, Reason: [{statuscode,404},{description,"Object Not Found"}]
-[03/Mar/2021:02:55:49 -0000] access to /assets/ico/favicon.ico failed for 68.6.101.116, reason: 
-"httpd_file: Can't access /home/ec2-user/.tsung/log/20210303-0255/assets/ico/favicon.ico: File not found"
-[03/Mar/2021:02:55:49 -0000], Server: tsung_controller, Protocol: HTTP, Transport: TCP, URI: /assets/ico/favicon.ico, Host: 172.31.61.231:8091, Peer: 68.6.101.116:59101, Reason: [{statuscode,404},{description,"Object Not Found"}]
-[03/Mar/2021:02:56:28 -0000] access to /favicon.ico failed for 68.6.101.116, reason: 
-"httpd_file: Can't access /home/ec2-user/.tsung/log/20210303-0255/favicon.ico: File not found"
-[03/Mar/2021:02:56:28 -0000], Server: tsung_controller, Protocol: HTTP, Transport: TCP, URI: /favicon.ico, Host: 172.31.61.231:8091, Peer: 68.6.101.116:59110, Reason: [{statuscode,404},{description,"Object Not Found"}]
