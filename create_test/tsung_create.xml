@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/usr/local/share/tsung/tsung-1.0.dtd" [] >
+<tsung loglevel="notice">
+    <clients>
+        <client host="localhost" maxusers="32768" use_controller_vm="true" />
+    </clients>
+
+    <servers>
+        <server host="ahliu.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
+    </servers>
+
+    <load>
+        <arrivalphase phase="1" duration="5" unit="second">
+            <users arrivalrate="1" unit="second"></users>
+        </arrivalphase>
+        <arrivalphase phase="2" duration="5" unit="second">
+            <users arrivalrate="2" unit="second"></users>
+        </arrivalphase>
+        <arrivalphase phase="3" duration="5" unit="second">
+            <users arrivalrate="4" unit="second"></users>
+        </arrivalphase>
+        <arrivalphase phase="4" duration="5" unit="second">
+            <users arrivalrate="8" unit="second"></users>
+        </arrivalphase>
+        <arrivalphase phase="5" duration="5" unit="second">
+            <users arrivalrate="16" unit="second"></users>
+        </arrivalphase>
+        <arrivalphase phase="6" duration="5" unit="second">
+            <users arrivalrate="32" unit="second"></users>
+        </arrivalphase>
+        <arrivalphase phase="7" duration="5" unit="second">
+            <users arrivalrate="64" unit="second"></users>
+        </arrivalphase>
+        <arrivalphase phase="8" duration="5" unit="second">
+            <users arrivalrate="128" unit="second"></users>
+        </arrivalphase>
+    </load>
+
+    <options>
+        <!-- Set connection timeout to 2 seconds -->
+        <option name="global_ack_timeout" value="2000"></option>
+        <!-- adding csv file with user-email and user-password for login -->
+    </options>
+
+    <sessions>
+
+        <session name="login_test" type="ts_http" weight="1">
+
+            <request><http method="GET" url="/"/></request>
+            <request><http method="GET" url="/load_test/sign_in_as_new_user"/></request>
+            <request><http method="GET" url="/"/></request>
+
+            <request><http method="GET" url="/games/1/groups"/></request>
+            <!-- for using dynamic variables the request has to be subst="true"-->
+            <request>
+                <!-- sets dynamic variable from hidden form field authenticity_token -->
+                <dyn_variable name="authenticity_token"/>
+                <http url='/games/1/groups/new' version='1.1' method='GET'>
+                    <http_header name='Accept-Encoding' value='gzip, deflate' />
+                </http>
+            </request>
+            <setdynvars sourcetype="eval"
+                        code="fun({Pid,DynVars})->
+                            {ok,Val}=ts_dynvars:lookup(authenticity_token,DynVars),
+                            http_uri:encode(Val) end.">
+                <var name="encoded_authenticity_token" />
+            </setdynvars>
+            <setdynvars sourcetype="random_string" length="5">
+                <var name="rndname" />
+            </setdynvars>
+            <setdynvars sourcetype="random_string" length="5">
+                <var name="rnddesc" />
+            </setdynvars>
+            <setdynvars sourcetype="random_string" length="5">
+                <var name="rndactivity" />
+            </setdynvars>
+            <setdynvars sourcetype="random_number" start="3" end="32">
+                <var name="rndint" />
+            </setdynvars>
+            <request subst="true">
+                <!-- sets encoded dynamic variables for authenticity_token, user-email and user-password-->
+                <http url='/games/1/groups/' version='1.1'
+                      contents='authenticity_token=%%_encoded_authenticity_token%%&amp;group%5Bgroup_name%5D=%%_rndname%%&amp;group%5Bmax_member_count%5D=%%_rndint%%&amp;group%5Bdescription%5D=%%_rnddesc%%&amp;group%5Bactivity%5D=%%_rndactivity%%&amp;commit=Create+Group'
+                      content_type='application/x-www-form-urlencoded'
+                      method='POST'>
+                    <http_header name='Accept-Encoding' value='gzip, deflate' />
+                </http>
+            </request>
+        </session>
+
+    </sessions>
+</tsung>
+
