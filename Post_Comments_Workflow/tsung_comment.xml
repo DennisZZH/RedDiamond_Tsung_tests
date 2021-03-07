@@ -6,7 +6,7 @@
   </clients>
 
   <servers>
-    <server host="Boning.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
+    <server host="zihaozhang.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
   </servers>
 
   <load>
@@ -28,10 +28,10 @@
     <arrivalphase phase="6" duration="5" unit="second">
       <users arrivalrate="32" unit="second"></users>
     </arrivalphase>
-    <!-- <arrivalphase phase="7" duration="5" unit="second">
+    <arrivalphase phase="7" duration="5" unit="second">
       <users arrivalrate="64" unit="second"></users>
     </arrivalphase>
-    <arrivalphase phase="8" duration="5" unit="second">
+    <!-- <arrivalphase phase="8" duration="5" unit="second">
       <users arrivalrate="128" unit="second"></users>
     </arrivalphase> -->
   </load>
