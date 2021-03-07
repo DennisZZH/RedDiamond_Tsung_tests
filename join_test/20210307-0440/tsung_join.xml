@@ -1,8 +1,6 @@
-<?xml version="1.0"?>
-<!DOCTYPE tsung SYSTEM "/usr/local/share/tsung/tsung-1.0.dtd" [] >
-<tsung loglevel="notice">
+<?xml version="1.0"?><tsung loglevel="notice">
   <clients>
-    <client host="localhost" maxusers="32768" use_controller_vm="true" />
+    <client host="localhost" maxusers="32768" use_controller_vm="true"/>
   </clients>
 
   <servers>
@@ -37,11 +35,9 @@
   </load>
 
   <options>
-    <!-- Set connection timeout to 2 seconds -->
     <option name="global_ack_timeout" value="2000"/>
     <option name="file_server" id="userlist" value="../userlist.csv"/>
-    <!-- adding csv file with user-email and user-password for login -->
-  </options>
+    </options>
 
   <sessions>
     
@@ -50,47 +46,31 @@
       <request><http method="GET" url="/"/></request>
 
       <request>
-        <!-- sets dynamic variable from hidden form field authenticity_token -->
         <dyn_variable name="authenticity_token"/>
-        <http url='/users/sign_in' version='1.1' method='GET'>
-          <http_header name='Accept-Encoding' value='gzip, deflate' />
+        <http url="/users/sign_in" version="1.1" method="GET">
+          <http_header name="Accept-Encoding" value="gzip, deflate"/>
         </http>
       </request>
 
       <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
-        <var name="user_name" />
-        <var name="user_email" />
-        <var name="user_password" />
+        <var name="user_name"/>
+        <var name="user_email"/>
+        <var name="user_password"/>
       </setdynvars>
 
-      <!-- parses dynamic variables user_email, user_password and authenticity_token to url-encoded variables -->
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(user_email,DynVars),
-                            http_uri:encode(Val) end.">
-        <var name="encoded_user_email" />
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_email,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_user_email"/>
       </setdynvars>
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(user_password,DynVars),
-                            http_uri:encode(Val) end.">
-        <var name="encoded_user_password" />
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_password,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_user_password"/>
       </setdynvars>
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(authenticity_token,DynVars),
-                            http_uri:encode(Val) end.">
-        <var name="encoded_authenticity_token" />
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(authenticity_token,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_authenticity_token"/>
       </setdynvars>
 
-      <!-- for using dynamic variables the request has to be subst="true"-->
       <request subst="true">
-        <!-- sets encoded dynamic variables for authenticity_token, user-email and user-password-->
-        <http url='/users/sign_in' version='1.1'
-              contents='authenticity_token=%%_encoded_authenticity_token%%&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in'
-              content_type='application/x-www-form-urlencoded'
-              method='POST'>
-          <http_header name='Accept-Encoding' value='gzip, deflate' />
+        <http url="/users/sign_in" version="1.1" contents="authenticity_token=%%_encoded_authenticity_token%%&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in" content_type="application/x-www-form-urlencoded" method="POST">
+          <http_header name="Accept-Encoding" value="gzip, deflate"/>
         </http>
       </request>
 
@@ -102,7 +82,6 @@
       <request><http method="GET" url="/games/5/groups/1"/></request>
       <request><http method="GET" url="/games/5/groups"/></request>
 
-      <!-- user look for a group for 1 and 3 seconds -->
       <thinktime random="true" min="1" max="3"/>
 
       <request><http method="GET" url="/games/5/groups/2"/></request>
