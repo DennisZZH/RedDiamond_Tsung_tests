@@ -6,57 +6,107 @@
   </clients>
 
   <servers>
-    <server host="ahliu.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
+    <server host="ahliu.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"/>
   </servers>
 
   <load>
-    <arrivalphase phase="1" duration="5" unit="second">
-      <users arrivalrate="1" unit="second"></users>
+    <arrivalphase phase="1" duration="30" unit="second">
+      <users arrivalrate="1" unit="second"/>
     </arrivalphase>
-    <arrivalphase phase="2" duration="5" unit="second">
-      <users arrivalrate="2" unit="second"></users>
+    <arrivalphase phase="2" duration="30" unit="second">
+      <users arrivalrate="2" unit="second"/>
     </arrivalphase>
-    <arrivalphase phase="3" duration="5" unit="second">
-      <users arrivalrate="4" unit="second"></users>
+    <arrivalphase phase="3" duration="30" unit="second">
+      <users arrivalrate="4" unit="second"/>
     </arrivalphase>
-    <arrivalphase phase="4" duration="5" unit="second">
-      <users arrivalrate="8" unit="second"></users>
+    <arrivalphase phase="4" duration="30" unit="second">
+      <users arrivalrate="8" unit="second"/>
     </arrivalphase>
-    <arrivalphase phase="5" duration="5" unit="second">
-      <users arrivalrate="16" unit="second"></users>
+    <arrivalphase phase="5" duration="30" unit="second">
+      <users arrivalrate="16" unit="second"/>
     </arrivalphase>
-    <arrivalphase phase="6" duration="5" unit="second">
-      <users arrivalrate="32" unit="second"></users>
+    <arrivalphase phase="6" duration="30" unit="second">
+      <users arrivalrate="32" unit="second"/>
     </arrivalphase>
-    <arrivalphase phase="7" duration="5" unit="second">
-      <users arrivalrate="64" unit="second"></users>
+    <arrivalphase phase="7" duration="30" unit="second">
+      <users arrivalrate="64" unit="second"/>
     </arrivalphase>
-    <arrivalphase phase="8" duration="5" unit="second">
-      <users arrivalrate="128" unit="second"></users>
+    <arrivalphase phase="8" duration="30" unit="second">
+      <users arrivalrate="128" unit="second"/>
     </arrivalphase>
   </load>
 
   <options>
     <!-- Set connection timeout to 2 seconds -->
-    <option name="global_ack_timeout" value="2000"></option>
+    <option name="global_ack_timeout" value="2000"/>
+    <option name="file_server" id="userlist" value=".tsung/userlist.csv"/>
     <!-- adding csv file with user-email and user-password for login -->
   </options>
 
   <sessions>
     
-    <session name="login_test" type="ts_http" weight="1">
+    <session name="join_test" type="ts_http" weight="1">
 
-      <request><http method="GET" url="/"></http></request>
-      <request><http method="GET" url="/load_test/sign_in_as_new_user"></http></request>
-      <request><http method="GET" url="/"></http></request>
+      <request><http method="GET" url="/"/></request>
 
-      <request><http method="GET" url="/games/1/groups"></http></request>
+      <request>
+        <!-- sets dynamic variable from hidden form field authenticity_token -->
+        <dyn_variable name="authenticity_token"/>
+        <http url='/users/sign_in' version='1.1' method='GET'>
+          <http_header name='Accept-Encoding' value='gzip, deflate' />
+        </http>
+      </request>
+
+      <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
+        <var name="user_name" />
+        <var name="user_email" />
+        <var name="user_password" />
+      </setdynvars>
+
+      <!-- parses dynamic variables user_email, user_password and authenticity_token to url-encoded variables -->
+      <setdynvars sourcetype="eval"
+                  code="fun({Pid,DynVars})->
+                            {ok,Val}=ts_dynvars:lookup(user_email,DynVars),
+                            http_uri:encode(Val) end.">
+        <var name="encoded_user_email" />
+      </setdynvars>
+      <setdynvars sourcetype="eval"
+                  code="fun({Pid,DynVars})->
+                            {ok,Val}=ts_dynvars:lookup(user_password,DynVars),
+                            http_uri:encode(Val) end.">
+        <var name="encoded_user_password" />
+      </setdynvars>
+      <setdynvars sourcetype="eval"
+                  code="fun({Pid,DynVars})->
+                            {ok,Val}=ts_dynvars:lookup(authenticity_token,DynVars),
+                            http_uri:encode(Val) end.">
+        <var name="encoded_authenticity_token" />
+      </setdynvars>
+
+      <!-- for using dynamic variables the request has to be subst="true"-->
+      <request subst="true">
+        <!-- sets encoded dynamic variables for authenticity_token, user-email and user-password-->
+        <http url='/users/sign_in' version='1.1'
+              contents='authenticity_token=%%_encoded_authenticity_token%%&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in'
+              content_type='application/x-www-form-urlencoded'
+              method='POST'>
+          <http_header name='Accept-Encoding' value='gzip, deflate' />
+        </http>
+      </request>
+
+      <request><http method="GET" url="/"/></request>
+      <request><http method="GET" url="/games/1/groups"/></request>
+
+      <request><http method="GET" url="/games/1/groups?activity_filter=&amp;max_member_count_filter=5&amp;commit=Select"/></request>
+
+      <request><http method="GET" url="/games/1/groups/1"/></request>
+      <request><http method="GET" url="/games/1/groups"/></request>
 
       <!-- user look for a group for 1 and 3 seconds -->
       <thinktime random="true" min="1" max="3"/>
 
-      <request><http method="GET" url="/games/1/groups/6"/></request>
-      <request><http method="POST" url="/games/1/groups/6/join"/></request>
+      <request><http method="GET" url="/games/1/groups/2"/></request>
+      <request><http method="POST" url="/games/1/groups/2/join"/></request>
     </session>
 
   </sessions>
