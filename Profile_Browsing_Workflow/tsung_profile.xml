@@ -101,11 +101,34 @@
 
       <!-- 4. User browses to a group -->
       <thinktime random="true" min="2" max="5"/>
-      <setdynvars sourcetype="random_number" start="1" end="1000">
-        <var name="group_id" />
-      </setdynvars>
+
+      <if var="game_id" eq="1">
+        <setdynvars sourcetype="random_number" start="1" end="1000">
+          <var name="group_id" />
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="2">
+        <setdynvars sourcetype="random_number" start="1001" end="2000">
+          <var name="group_id" />
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="3">
+        <setdynvars sourcetype="random_number" start="2001" end="3000">
+          <var name="group_id" />
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="4">
+        <setdynvars sourcetype="random_number" start="3001" end="4000">
+          <var name="group_id" />
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="5">
+        <setdynvars sourcetype="random_number" start="4001" end="5000">
+          <var name="group_id" />
+        </setdynvars>
+      </if>
       <!-- The group_id is unique for different games. So when using group_id from 1 to 1000, only use gameid: 1 -->
-      <request subst="true"><http method="GET" url="/games/1/groups/%%_group_id%%"></http></request>
+      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups/%%_group_id%%"></http></request>
 
       <!-- 5. User browses user profiles page -->
       <thinktime random="true" min="2" max="5"/>
