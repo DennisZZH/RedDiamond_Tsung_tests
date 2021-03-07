@@ -37,19 +37,17 @@
   </load>
 
   <options>
-    <!-- Set connection timeout to 2 seconds -->
     <option name="global_ack_timeout" value="2000"></option>
-    <!-- adding csv file with user-email and user-password for login -->
-   <option name="file_server" id="userlist" value=".tsung/userlist.csv"/>
+    <option name="file_server" id="userlist" value=".tsung/userlist.csv"/>
   </options>
 
   <sessions>
     
     <session name="comment_test" type="ts_http" weight="1">
 
+       <!-- 1. User browses to the mainpage -->
       <request><http method="GET" url="/"></http></request>
 
-      <!-- sets dynamic variables from csv list with id userlist -->
       <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
         <var name="user_name" />
         <var name="user_email" />
@@ -71,7 +69,6 @@
         <var name="encoded_user_email" />
       </setdynvars>
      
-      <!-- parses dynamic variables user_email, user_password and authenticity_token to url-encoded variables -->
       <setdynvars sourcetype="eval"
                   code="fun({Pid,DynVars})->
                             {ok,Val}=ts_dynvars:lookup(user_email,DynVars),
@@ -85,11 +82,11 @@
         <var name="encoded_user_password" />
       </setdynvars>
 
-      <!-- thinktime of user is random but between 2 and 5 seconds -->
+
       <thinktime random="true" min="2" max="5"/>
 
+      <!-- 2. User logs in -->
       <request subst="true">
-        <!-- sets encoded dynamic variables for authenticity_token, user-email and user-password-->
         <http url='/users/sign_in' version='1.1'
           contents='authenticity_token=null&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in'
           content_type='application/x-www-form-urlencoded'
@@ -98,11 +95,13 @@
         </http>
       </request>
 
-      <!-- Visit a random group page-->
+      <!-- 3. User browses to a game page to see that game’s groups -->
       <!-- The group_id is unique for different games. So when using group_id from 1 to 1000, only use gameid: 1 -->
       <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"></http></request>
+      <!-- 4. User browses to a group -->
       <request subst="true"><http method="GET" url="/games/1/groups/%%_group_id%%"></http></request>
 
+      <!-- 5. User posts a comment on the group -->
       <request subst="true">
           <!-- Comment on group-->
           <http url='/games/1/groups/%%_group_id%%/comments' version='1.1'
@@ -113,12 +112,12 @@
           </http>
       </request>
 
-      <!-- thinktime of user is random but between 2 and 5 seconds -->
       <thinktime random="true" min="2" max="5"/>
 
-      <!-- Visit a random user's profile -->
+      <!-- 6. Visit a random user's profile -->
       <request subst="true"><http method="GET" url="/profile/%%_user_name%%"></http></request>
 
+      <!-- 7. User posts a comment on the user’s profile -->
       <request subst="true">
           <!-- Comment on user-->
           <http url='/profile/%%_user_name%%/comments' version='1.1'
@@ -129,8 +128,8 @@
           </http>
       </request>
 
+      <!-- 8. Log out-->
       <request subst="true">
-      <!-- Log out-->
       <http url='/users/sign_out' version='1.1'
         contents='_method=delete&amp;authenticity_token=null&amp;'
         content_type='application/x-www-form-urlencoded'
@@ -139,6 +138,7 @@
       </http>
     </request>
     </session>
+    
   </sessions>
 </tsung>
       
