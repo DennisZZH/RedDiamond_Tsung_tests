@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/usr/local/share/tsung/tsung-1.0.dtd" [] >
+<tsung loglevel="notice">
+  <clients>
+    <client host="localhost" maxusers="32768" use_controller_vm="true" />
+  </clients>
+
+  <servers>
+    <server host="new-zihaozhang.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"/>
+  </servers>
+
+  <load>
+    <arrivalphase phase="1" duration="30" unit="second">
+      <users arrivalrate="1" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="2" duration="30" unit="second">
+      <users arrivalrate="2" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="3" duration="30" unit="second">
+      <users arrivalrate="4" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="4" duration="30" unit="second">
+      <users arrivalrate="8" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="5" duration="30" unit="second">
+      <users arrivalrate="16" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="6" duration="30" unit="second">
+      <users arrivalrate="32" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="7" duration="30" unit="second">
+      <users arrivalrate="64" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="8" duration="30" unit="second">
+      <users arrivalrate="128" unit="second"/>
+    </arrivalphase>
+  </load>
+
+  <options>
+    <!-- Set connection timeout to 2 seconds -->
+    <option name="global_ack_timeout" value="2000"/>
+    <!-- adding csv file with user-email and user-password for login -->
+  </options>
+
+  <sessions>
+
+    <session name="browse_test" type="ts_http" weight="1">
+
+    <setdynvars sourcetype="random_number" start="1" end="5">
+        <var name="game_id" />
+      </setdynvars>
+
+     <if var="game_id" eq="1">
+        <setdynvars sourcetype="random_number" start="1" end="1000">
+          <var name="group_id" />
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="2">
+        <setdynvars sourcetype="random_number" start="1001" end="2000">
+          <var name="group_id" />
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="3">
+        <setdynvars sourcetype="random_number" start="2001" end="3000">
+          <var name="group_id" />
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="4">
+        <setdynvars sourcetype="random_number" start="3001" end="4000">
+          <var name="group_id" />
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="5">
+        <setdynvars sourcetype="random_number" start="4001" end="5000">
+          <var name="group_id" />
+        </setdynvars>
+      </if>
+
+      <request subst="true"><http method="GET" url="/"/></request>
+      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"/></request>
+      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups/%%_group_id%%"/></request>
+      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"/></request>
+      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups/%%_group_id%%"/></request>
+
+    </session>
+
+  </sessions>
+</tsung>
