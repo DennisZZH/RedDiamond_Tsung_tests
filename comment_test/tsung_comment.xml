@@ -88,7 +88,6 @@
       <!-- thinktime of user is random but between 2 and 5 seconds -->
       <thinktime random="true" min="2" max="5"/>
 
-      <!-- for using dynamic variables the request has to be subst="true"-->
       <request subst="true">
         <!-- sets encoded dynamic variables for authenticity_token, user-email and user-password-->
         <http url='/users/sign_in' version='1.1'
@@ -104,9 +103,8 @@
       <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"></http></request>
       <request subst="true"><http method="GET" url="/games/1/groups/%%_group_id%%"></http></request>
 
-      <!-- for using dynamic variables the request has to be subst="true"-->
       <request subst="true">
-          <!-- sets encoded dynamic variables for authenticity_token, comment_body-->
+          <!-- Comment on group-->
           <http url='/games/1/groups/%%_group_id%%/comments' version='1.1'
             contents='authenticity_token=null&amp;comment%5Bbody%5D=test&amp;commit=Save+Comment'
             content_type='application/x-www-form-urlencoded'
@@ -121,9 +119,8 @@
       <!-- Visit a random user's profile -->
       <request subst="true"><http method="GET" url="/profile/%%_user_name%%"></http></request>
 
-      <!-- for using dynamic variables the request has to be subst="true"-->
       <request subst="true">
-          <!-- sets encoded dynamic variables for authenticity_token, comment_body-->
+          <!-- Comment on user-->
           <http url='/profile/%%_user_name%%/comments' version='1.1'
             contents='authenticity_token=null&amp;comment%5Bbody%5D=test&amp;commit=Save+Comment'
             content_type='application/x-www-form-urlencoded'
@@ -132,9 +129,8 @@
           </http>
       </request>
 
-      <!-- for using dynamic variables the request has to be subst="true"-->
       <request subst="true">
-      <!-- sets encoded dynamic variables for authenticity_token, comment_body-->
+      <!-- Log out-->
       <http url='/users/sign_out' version='1.1'
         contents='_method=delete&amp;authenticity_token=null&amp;'
         content_type='application/x-www-form-urlencoded'
