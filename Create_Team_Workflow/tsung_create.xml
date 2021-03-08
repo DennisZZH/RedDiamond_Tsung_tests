@@ -6,7 +6,7 @@
   </clients>
 
   <servers>
-    <server host="new-zihaozhang.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
+    <server host="reddiamond.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
   </servers>
 
   <load>
@@ -40,7 +40,7 @@
     <!-- Set connection timeout to 2 seconds -->
     <option name="global_ack_timeout" value="2000"></option>
     <!-- adding csv file with user-email and user-password for login -->
-    <option name="file_server" id="userlist" value=".tsung/userlist.csv"/>
+    <option name="file_server" id="userlist" value="../userlist.csv"/>
   </options>
 
   <sessions>
@@ -133,7 +133,7 @@
         <var name="rndint"/>
       </setdynvars>
       <request subst="true">
-        <dyn_variable name="redirect" re="Location: (http://.*)\r"/>
+        <dyn_variable name="redirect" re="\/games\/.\/groups\/.*"/>
         <http url='/games/%%_game_id%%/groups/' version='1.1'
               contents='authenticity_token=%%_encoded_authenticity_token%%&amp;group%5Bgroup_name%5D=%%_rndname%%&amp;group%5Bmax_member_count%5D=%%_rndint%%&amp;group%5Bdescription%5D=%%_rnddesc%%&amp;group%5Bactivity%5D=%%_rndactivity%%&amp;commit=Create+Group'
               content_type='application/x-www-form-urlencoded'

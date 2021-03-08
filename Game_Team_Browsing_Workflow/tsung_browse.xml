@@ -6,7 +6,7 @@
   </clients>
 
   <servers>
-    <server host="new-zihaozhang.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"/>
+    <server host="reddiamond.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"/>
   </servers>
 
   <load>
@@ -90,6 +90,7 @@
       <request subst="true">
         <http method="GET" url="/games/%%_game_id%%/groups/%%_group_id_1%%"/>
       </request>
+      <thinktime random="true" min="1" max="3"/>
       <request subst="true">
         <http method="GET" url="/games/%%_game_id%%/groups"/>
       </request>
