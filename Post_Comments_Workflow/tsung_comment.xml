@@ -104,9 +104,6 @@
         <var name="encoded_user_password" />
       </setdynvars>
 
-
-      <thinktime random="true" min="2" max="5"/>
-
       <!-- 2. User logs in -->
       <request subst="true">
         <http url='/users/sign_in' version='1.1'
@@ -116,6 +113,8 @@
           <http_header name='Accept-Encoding' value='gzip, deflate' />
         </http>
       </request>
+
+      <thinktime random="true" min="2" max="5"/>
 
       <!-- 3. User browses to a game page to see that game’s groups -->
       <!-- The group_id is unique for different games. So when using group_id from 1 to 1000, only use gameid: 1 -->
@@ -134,7 +133,7 @@
           </http>
       </request>
 
-      <thinktime random="true" min="2" max="5"/>
+      <thinktime random="true" min="1" max="3"/>
 
       <!-- 6. Visit a random user's profile -->
       <request subst="true"><http method="GET" url="/profile/%%_user_name%%"></http></request>
@@ -150,7 +149,10 @@
           </http>
       </request>
 
-      <!-- 8. Log out-->
+      <!-- 8. return to home page -->
+      <request><http method="GET" url="/"/></request>
+
+      <!-- 9. Log out-->
       <request subst="true">
       <http url='/users/sign_out' version='1.1'
         contents='_method=delete&amp;authenticity_token=null&amp;'

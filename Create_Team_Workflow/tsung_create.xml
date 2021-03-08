@@ -1,146 +1,154 @@
 <?xml version="1.0"?>
 <!DOCTYPE tsung SYSTEM "/usr/local/share/tsung/tsung-1.0.dtd" [] >
 <tsung loglevel="notice">
-    <clients>
-        <client host="localhost" maxusers="32768" use_controller_vm="true" />
-    </clients>
+  <clients>
+    <client host="localhost" maxusers="32768" use_controller_vm="true"/>
+  </clients>
 
-    <servers>
-        <server host="new-zihaozhang.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
-    </servers>
+  <servers>
+    <server host="new-zihaozhang.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
+  </servers>
 
-    <load>
-        <arrivalphase phase="1" duration="30" unit="second">
-            <users arrivalrate="1" unit="second"></users>
-        </arrivalphase>
-        <arrivalphase phase="2" duration="30" unit="second">
-            <users arrivalrate="2" unit="second"></users>
-        </arrivalphase>
-        <arrivalphase phase="3" duration="30" unit="second">
-            <users arrivalrate="4" unit="second"></users>
-        </arrivalphase>
-        <arrivalphase phase="4" duration="30" unit="second">
-            <users arrivalrate="8" unit="second"></users>
-        </arrivalphase>
-        <arrivalphase phase="5" duration="30" unit="second">
-            <users arrivalrate="16" unit="second"></users>
-        </arrivalphase>
-        <arrivalphase phase="6" duration="30" unit="second">
-            <users arrivalrate="32" unit="second"></users>
-        </arrivalphase>
-        <arrivalphase phase="7" duration="30" unit="second">
-            <users arrivalrate="64" unit="second"></users>
-        </arrivalphase>
-        <arrivalphase phase="8" duration="30" unit="second">
-            <users arrivalrate="128" unit="second"></users>
-        </arrivalphase>
-    </load>
+  <load>
+    <arrivalphase phase="1" duration="30" unit="second">
+      <users arrivalrate="1" unit="second"></users>
+    </arrivalphase>
+    <arrivalphase phase="2" duration="30" unit="second">
+      <users arrivalrate="2" unit="second"></users>
+    </arrivalphase>
+    <arrivalphase phase="3" duration="30" unit="second">
+      <users arrivalrate="4" unit="second"></users>
+    </arrivalphase>
+    <arrivalphase phase="4" duration="30" unit="second">
+      <users arrivalrate="8" unit="second"></users>
+    </arrivalphase>
+    <arrivalphase phase="5" duration="30" unit="second">
+      <users arrivalrate="16" unit="second"></users>
+    </arrivalphase>
+    <arrivalphase phase="6" duration="30" unit="second">
+      <users arrivalrate="32" unit="second"></users>
+    </arrivalphase>
+    <arrivalphase phase="7" duration="30" unit="second">
+      <users arrivalrate="64" unit="second"></users>
+    </arrivalphase>
+    <arrivalphase phase="8" duration="30" unit="second">
+      <users arrivalrate="128" unit="second"></users>
+    </arrivalphase>
+  </load>
 
-    <options>
-        <!-- Set connection timeout to 2 seconds -->
-        <option name="global_ack_timeout" value="2000"></option>
-        <!-- adding csv file with user-email and user-password for login -->
-        <option name="file_server" id="userlist" value=".tsung/userlist.csv"/>
-    </options>
+  <options>
+    <!-- Set connection timeout to 2 seconds -->
+    <option name="global_ack_timeout" value="2000"></option>
+    <!-- adding csv file with user-email and user-password for login -->
+    <option name="file_server" id="userlist" value=".tsung/userlist.csv"/>
+  </options>
 
-    <sessions>
+  <sessions>
 
-        <session name="login_test" type="ts_http" weight="1">
+    <session name="create_test" type="ts_http" weight="1">
 
-        <!-- 1. User browses to the mainpage. -->
-        <request><http method="GET" url="/"/></request>
-           
-            <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
-                <var name="user_name" />
-                <var name="user_email" />
-                <var name="user_password" />
-            </setdynvars>
+      <!-- 1. User browses to the mainpage. -->
+      <request>
+        <http method="GET" url="/"/>
+      </request>
 
-            <setdynvars sourcetype="random_number" start="1" end="5">
-                <var name="game_id" />
-            </setdynvars>
+      <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
+        <var name="user_name"/>
+        <var name="user_email"/>
+        <var name="user_password"/>
+      </setdynvars>
 
-            <if var="game_id" eq="1">
-                <setdynvars sourcetype="random_number" start="1" end="1000">
-                <var name="group_id" />
-                </setdynvars>
-            </if>
-            <if var="game_id" eq="2">
-                <setdynvars sourcetype="random_number" start="1001" end="2000">
-                <var name="group_id" />
-                </setdynvars>
-            </if>
-            <if var="game_id" eq="3">
-                <setdynvars sourcetype="random_number" start="2001" end="3000">
-                <var name="group_id" />
-                </setdynvars>
-            </if>
-            <if var="game_id" eq="4">
-                <setdynvars sourcetype="random_number" start="3001" end="4000">
-                <var name="group_id" />
-                </setdynvars>
-            </if>
-            <if var="game_id" eq="5">
-                <setdynvars sourcetype="random_number" start="4001" end="5000">
-                <var name="group_id" />
-                </setdynvars>
-            </if>
+      <setdynvars sourcetype="random_number" start="1" end="5">
+        <var name="game_id"/>
+      </setdynvars>
 
-            <setdynvars sourcetype="eval"
-                        code="fun({Pid,DynVars})->
+      <if var="game_id" eq="1">
+        <setdynvars sourcetype="random_number" start="1" end="1000">
+          <var name="group_id"/>
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="2">
+        <setdynvars sourcetype="random_number" start="1001" end="2000">
+          <var name="group_id"/>
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="3">
+        <setdynvars sourcetype="random_number" start="2001" end="3000">
+          <var name="group_id"/>
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="4">
+        <setdynvars sourcetype="random_number" start="3001" end="4000">
+          <var name="group_id"/>
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="5">
+        <setdynvars sourcetype="random_number" start="4001" end="5000">
+          <var name="group_id"/>
+        </setdynvars>
+      </if>
+
+      <setdynvars sourcetype="eval"
+                  code="fun({Pid,DynVars})->
                                     {ok,Val}=ts_dynvars:lookup(user_email,DynVars),
                                     http_uri:encode(Val) end.">
-                <var name="encoded_user_email" />
-            </setdynvars>
-            
-            <setdynvars sourcetype="eval"
-                        code="fun({Pid,DynVars})->
+        <var name="encoded_user_email"/>
+      </setdynvars>
+
+      <setdynvars sourcetype="eval"
+                  code="fun({Pid,DynVars})->
                                     {ok,Val}=ts_dynvars:lookup(user_password,DynVars),
                                     http_uri:encode(Val) end.">
-                <var name="encoded_user_password" />
-            </setdynvars>
+        <var name="encoded_user_password"/>
+      </setdynvars>
 
+      <!-- 2. User logs in. -->
+      <request subst="true">
+        <http url='/users/sign_in' version='1.1'
+              contents='authenticity_token=null&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in'
+              content_type='application/x-www-form-urlencoded'
+              method='POST'>
+          <http_header name='Accept-Encoding' value='gzip, deflate'/>
+        </http>
+      </request>
 
-            <thinktime random="true" min="2" max="5"/>
+      <thinktime random="true" min="1" max="3"/>
 
-            <!-- 2. User logs in. -->
-            <request subst="true">
-                <http url='/users/sign_in' version='1.1'
-                contents='authenticity_token=null&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in'
-                content_type='application/x-www-form-urlencoded'
-                method='POST'>
-                <http_header name='Accept-Encoding' value='gzip, deflate' />
-                </http>
-            </request>
+      <!-- 3. User browses to a game page to see that game’s groups. -->
+      <request subst="true">
+        <http method="GET" url="/games/%%_game_id%%/groups"/>
+      </request>
 
-            <!-- 3. User browses to a game page to see that game’s groups. -->
-            <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"/></request>
-           
-           <!-- 4. User creates a group under that game. -->
-            <setdynvars sourcetype="random_string" length="5">
-                <var name="rndname" />
-            </setdynvars>
-            <setdynvars sourcetype="random_string" length="5">
-                <var name="rnddesc" />
-            </setdynvars>
-            <setdynvars sourcetype="random_string" length="5">
-                <var name="rndactivity" />
-            </setdynvars>
-            <setdynvars sourcetype="random_number" start="3" end="32">
-                <var name="rndint" />
-            </setdynvars>
-            <request subst="true">
-                <!-- sets encoded dynamic variables for authenticity_token, user-email and user-password-->
-                <http url='/games/%%_game_id%%/groups/' version='1.1'
-                      contents='authenticity_token=%%_encoded_authenticity_token%%&amp;group%5Bgroup_name%5D=%%_rndname%%&amp;group%5Bmax_member_count%5D=%%_rndint%%&amp;group%5Bdescription%5D=%%_rnddesc%%&amp;group%5Bactivity%5D=%%_rndactivity%%&amp;commit=Create+Group'
-                      content_type='application/x-www-form-urlencoded'
-                      method='POST'>
-                    <http_header name='Accept-Encoding' value='gzip, deflate' />
-                </http>
-            </request>
+      <!-- 4. User creates a group under that game. -->
+      <setdynvars sourcetype="random_string" length="5">
+        <var name="rndname"/>
+      </setdynvars>
+      <setdynvars sourcetype="random_string" length="5">
+        <var name="rnddesc"/>
+      </setdynvars>
+      <setdynvars sourcetype="random_string" length="5">
+        <var name="rndactivity"/>
+      </setdynvars>
+      <setdynvars sourcetype="random_number" start="3" end="32">
+        <var name="rndint"/>
+      </setdynvars>
+      <request subst="true">
+        <dyn_variable name="redirect" re="Location: (http://.*)\r"/>
+        <http url='/games/%%_game_id%%/groups/' version='1.1'
+              contents='authenticity_token=%%_encoded_authenticity_token%%&amp;group%5Bgroup_name%5D=%%_rndname%%&amp;group%5Bmax_member_count%5D=%%_rndint%%&amp;group%5Bdescription%5D=%%_rnddesc%%&amp;group%5Bactivity%5D=%%_rndactivity%%&amp;commit=Create+Group'
+              content_type='application/x-www-form-urlencoded'
+              method='POST'>
+          <http_header name='Accept-Encoding' value='gzip, deflate'/>
+        </http>
+      </request>
 
-        </session>
+      <!-- 5. follow the redirect to the newly created page -->
+      <request subst="true">
+        <http url="%%_redirect%%" method="GET"/>
+      </request>
 
-    </sessions>
+    </session>
+
+  </sessions>
 </tsung>
 

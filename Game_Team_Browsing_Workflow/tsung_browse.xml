@@ -2,7 +2,7 @@
 <!DOCTYPE tsung SYSTEM "/usr/local/share/tsung/tsung-1.0.dtd" [] >
 <tsung loglevel="notice">
   <clients>
-    <client host="localhost" maxusers="32768" use_controller_vm="true" />
+    <client host="localhost" maxusers="32768" use_controller_vm="true"/>
   </clients>
 
   <servers>
@@ -46,41 +46,56 @@
 
     <session name="browse_test" type="ts_http" weight="1">
 
-    <setdynvars sourcetype="random_number" start="1" end="5">
-        <var name="game_id" />
+      <setdynvars sourcetype="random_number" start="1" end="5">
+        <var name="game_id"/>
       </setdynvars>
 
-     <if var="game_id" eq="1">
+      <if var="game_id" eq="1">
         <setdynvars sourcetype="random_number" start="1" end="1000">
-          <var name="group_id" />
+          <var name="group_id_1"/>
+          <var name="group_id_2"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="2">
         <setdynvars sourcetype="random_number" start="1001" end="2000">
-          <var name="group_id" />
+          <var name="group_id_1"/>
+          <var name="group_id_2"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="3">
         <setdynvars sourcetype="random_number" start="2001" end="3000">
-          <var name="group_id" />
+          <var name="group_id_1"/>
+          <var name="group_id_2"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="4">
         <setdynvars sourcetype="random_number" start="3001" end="4000">
-          <var name="group_id" />
+          <var name="group_id_1"/>
+          <var name="group_id_2"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="5">
         <setdynvars sourcetype="random_number" start="4001" end="5000">
-          <var name="group_id" />
+          <var name="group_id_1"/>
+          <var name="group_id_2"/>
         </setdynvars>
       </if>
 
-      <request subst="true"><http method="GET" url="/"/></request>
-      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"/></request>
-      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups/%%_group_id%%"/></request>
-      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"/></request>
-      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups/%%_group_id%%"/></request>
+      <request subst="true">
+        <http method="GET" url="/"/>
+      </request>
+      <request subst="true">
+        <http method="GET" url="/games/%%_game_id%%/groups"/>
+      </request>
+      <request subst="true">
+        <http method="GET" url="/games/%%_game_id%%/groups/%%_group_id_1%%"/>
+      </request>
+      <request subst="true">
+        <http method="GET" url="/games/%%_game_id%%/groups"/>
+      </request>
+      <request subst="true">
+        <http method="GET" url="/games/%%_game_id%%/groups/%%_group_id_2%%"/>
+      </request>
 
     </session>
 
