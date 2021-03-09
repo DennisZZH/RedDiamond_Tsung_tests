@@ -1,0 +1,132 @@
+<?xml version="1.0"?><tsung loglevel="notice">
+  <clients>
+    <client host="localhost" maxusers="32768" use_controller_vm="true"/>
+  </clients>
+
+  <servers>
+    <server host="pagi-RedDiamond.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"/>
+  </servers>
+
+  <load>
+    <arrivalphase phase="1" duration="30" unit="second">
+      <users arrivalrate="1" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="2" duration="30" unit="second">
+      <users arrivalrate="2" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="3" duration="30" unit="second">
+      <users arrivalrate="4" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="4" duration="30" unit="second">
+      <users arrivalrate="8" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="5" duration="30" unit="second">
+      <users arrivalrate="16" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="6" duration="30" unit="second">
+      <users arrivalrate="32" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="7" duration="30" unit="second">
+      <users arrivalrate="64" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="8" duration="30" unit="second">
+      <users arrivalrate="128" unit="second"/>
+    </arrivalphase>
+  </load>
+
+  <options>
+    <option name="global_ack_timeout" value="2000"/>
+    <option name="file_server" id="userlist" value=".tsung/userlist.csv"/>
+  </options>
+
+  <sessions>
+    
+    <session name="comment_test" type="ts_http" weight="1">
+
+       <request><http method="GET" url="/"/></request>
+
+      <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
+        <var name="user_name"/>
+        <var name="user_email"/>
+        <var name="user_password"/>
+      </setdynvars>
+
+      <setdynvars sourcetype="random_number" start="1" end="5">
+        <var name="game_id"/>
+      </setdynvars>
+
+      <if var="game_id" eq="1">
+        <setdynvars sourcetype="random_number" start="1" end="1000">
+          <var name="group_id"/>
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="2">
+        <setdynvars sourcetype="random_number" start="1001" end="2000">
+          <var name="group_id"/>
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="3">
+        <setdynvars sourcetype="random_number" start="2001" end="3000">
+          <var name="group_id"/>
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="4">
+        <setdynvars sourcetype="random_number" start="3001" end="4000">
+          <var name="group_id"/>
+        </setdynvars>
+      </if>
+      <if var="game_id" eq="5">
+        <setdynvars sourcetype="random_number" start="4001" end="5000">
+          <var name="group_id"/>
+        </setdynvars>
+      </if>
+
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_email,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_user_email"/>
+      </setdynvars>
+     
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_email,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_user_email"/>
+      </setdynvars>
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_password,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_user_password"/>
+      </setdynvars>
+
+      <request subst="true">
+        <http url="/users/sign_in" version="1.1" contents="authenticity_token=null&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in" content_type="application/x-www-form-urlencoded" method="POST">
+          <http_header name="Accept-Encoding" value="gzip, deflate"/>
+        </http>
+      </request>
+
+      <thinktime random="true" min="2" max="5"/>
+
+      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"/></request>
+      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups/%%_group_id%%"/></request>
+
+      <request subst="true">
+          <http url="/games/%%_game_id%%/groups/%%_group_id%%/comments" version="1.1" contents="authenticity_token=null&amp;comment%5Bbody%5D=test&amp;commit=Save+Comment" content_type="application/x-www-form-urlencoded" method="POST">
+            <http_header name="Accept-Encoding" value="gzip, deflate"/>
+          </http>
+      </request>
+
+      <thinktime random="true" min="1" max="3"/>
+
+      <request subst="true"><http method="GET" url="/profile/%%_user_name%%"/></request>
+
+      <request subst="true">
+          <http url="/profile/%%_user_name%%/comments" version="1.1" contents="authenticity_token=null&amp;comment%5Bbody%5D=test&amp;commit=Save+Comment" content_type="application/x-www-form-urlencoded" method="POST">
+            <http_header name="Accept-Encoding" value="gzip, deflate"/>
+          </http>
+      </request>
+
+      <request><http method="GET" url="/"/></request>
+
+      <request subst="true">
+      <http url="/users/sign_out" version="1.1" contents="_method=delete&amp;authenticity_token=null&amp;" content_type="application/x-www-form-urlencoded" method="POST">
+        <http_header name="Accept-Encoding" value="gzip, deflate"/>
+      </http>
+    </request>
+    </session>
+    
+  </sessions>
+</tsung>
