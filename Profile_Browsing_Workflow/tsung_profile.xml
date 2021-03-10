@@ -6,7 +6,7 @@
   </clients>
 
   <servers>
-    <server host="reddiamond.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
+    <server host="hori-RedDiamond.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
   </servers>
 
   <load>
@@ -40,7 +40,7 @@
     <!-- Set connection timeout to 2 seconds -->
     <option name="global_ack_timeout" value="2000"></option>
     <!-- adding csv file with user-email and user-password for login -->
-    <option name="file_server" id="userlist" value="../userlist.csv"/>
+    <option name="file_server" id="userlist" value=".tsung/userlist.csv"/>
   </options>
 
   <sessions>
