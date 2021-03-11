@@ -1,6 +1,4 @@
-<?xml version="1.0"?>
-<!DOCTYPE tsung SYSTEM "/usr/local/share/tsung/tsung-1.0.dtd" [] >
-<tsung loglevel="notice">
+<?xml version="1.0"?><tsung loglevel="notice">
   <clients>
     <client host="localhost" maxusers="32768" use_controller_vm="true"/>
   </clients>
@@ -43,10 +41,8 @@
   </load>
 
   <options>
-    <!-- Set connection timeout to 2 seconds -->
     <option name="global_ack_timeout" value="2000"/>
-    <!-- adding csv file with user-email and user-password for login -->
-  </options>
+    </options>
 
   <sessions>
 

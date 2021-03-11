@@ -1,10 +1,12 @@
-<?xml version="1.0"?><tsung loglevel="notice">
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/usr/local/share/tsung/tsung-1.0.dtd" [] >
+<tsung loglevel="notice">
   <clients>
     <client host="localhost" maxusers="32768" use_controller_vm="true"/>
   </clients>
 
   <servers>
-    <server host="btdev.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"/>
+    <server host="alex.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"/>
   </servers>
 
   <load>

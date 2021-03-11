@@ -1,6 +1,4 @@
-<?xml version="1.0"?>
-<!DOCTYPE tsung SYSTEM "/usr/local/share/tsung/tsung-1.0.dtd" [] >
-<tsung loglevel="notice">
+<?xml version="1.0"?><tsung loglevel="notice">
   <clients>
     <client host="localhost" maxusers="32768" use_controller_vm="true"/>
   </clients>
@@ -34,23 +32,26 @@
     <arrivalphase phase="8" duration="30" unit="second">
       <users arrivalrate="128" unit="second"/>
     </arrivalphase>
-    <arrivalphase phase="9" duration="30" unit="second">
-      <users arrivalrate="256" unit="second"/>
-    </arrivalphase>
-    <arrivalphase phase="10" duration="30" unit="second">
-      <users arrivalrate="512" unit="second"/>
-    </arrivalphase>
   </load>
 
   <options>
-    <!-- Set connection timeout to 2 seconds -->
     <option name="global_ack_timeout" value="2000"/>
-    <!-- adding csv file with user-email and user-password for login -->
+    <option name="file_server" id="userlist" value="../userlist.csv"/>
   </options>
 
   <sessions>
 
-    <session name="browse_test" type="ts_http" weight="1">
+    <session name="create_test" type="ts_http" weight="1">
+
+      <request>
+        <http method="GET" url="/"/>
+      </request>
+
+      <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
+        <var name="user_name"/>
+        <var name="user_email"/>
+        <var name="user_password"/>
+      </setdynvars>
 
       <setdynvars sourcetype="random_number" start="1" end="5">
         <var name="game_id"/>
@@ -58,50 +59,64 @@
 
       <if var="game_id" eq="1">
         <setdynvars sourcetype="random_number" start="1" end="1000">
-          <var name="group_id_1"/>
-          <var name="group_id_2"/>
+          <var name="group_id"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="2">
         <setdynvars sourcetype="random_number" start="1001" end="2000">
-          <var name="group_id_1"/>
-          <var name="group_id_2"/>
+          <var name="group_id"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="3">
         <setdynvars sourcetype="random_number" start="2001" end="3000">
-          <var name="group_id_1"/>
-          <var name="group_id_2"/>
+          <var name="group_id"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="4">
         <setdynvars sourcetype="random_number" start="3001" end="4000">
-          <var name="group_id_1"/>
-          <var name="group_id_2"/>
+          <var name="group_id"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="5">
         <setdynvars sourcetype="random_number" start="4001" end="5000">
-          <var name="group_id_1"/>
-          <var name="group_id_2"/>
+          <var name="group_id"/>
         </setdynvars>
       </if>
 
       <request subst="true">
-        <http method="GET" url="/"/>
+        <http url="/users/sign_in" contents="user%5Bemail%5D=%%_user_email%%&amp;user%5Bpassword%5D=%%_user_password%%" method="POST">
+          <http_header name="Accept-Encoding" value="gzip, deflate"/>
+        </http>
       </request>
-      <request subst="true">
-        <http method="GET" url="/games/%%_game_id%%/groups"/>
-      </request>
-      <request subst="true">
-        <http method="GET" url="/games/%%_game_id%%/groups/%%_group_id_1%%"/>
-      </request>
+
       <thinktime random="true" min="1" max="3"/>
+
       <request subst="true">
         <http method="GET" url="/games/%%_game_id%%/groups"/>
       </request>
+
+      <setdynvars sourcetype="random_string" length="5">
+        <var name="rndname"/>
+      </setdynvars>
+      <setdynvars sourcetype="random_string" length="5">
+        <var name="rnddesc"/>
+      </setdynvars>
+      <setdynvars sourcetype="random_string" length="5">
+        <var name="rndactivity"/>
+      </setdynvars>
+      <setdynvars sourcetype="random_number" start="3" end="32">
+        <var name="rndint"/>
+      </setdynvars>
       <request subst="true">
-        <http method="GET" url="/games/%%_game_id%%/groups/%%_group_id_2%%"/>
+        <match do="abort" when="nomatch">302 Found</match>
+        <dyn_variable name="redirect" re="Location: (http://.*)\r"/>
+        <http url="/games/%%_game_id%%/groups/" contents="group%5Bgroup_name%5D=%%_rndname%%&amp;group%5Bmax_member_count%5D=%%_rndint%%&amp;group%5Bdescription%5D=%%_rnddesc%%&amp;group%5Bactivity%5D=%%_rndactivity%%" method="POST">
+          <http_header name="Accept-Encoding" value="gzip, deflate"/>
+        </http>
+      </request>
+
+      <request subst="true">
+        <http url="%%_redirect%%" method="GET"/>
       </request>
 
     </session>
