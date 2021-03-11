@@ -1,0 +1,5 @@
+[11/Mar/2021:02:13:21 -0000] access to /boaform/admin/formLogin?username=admin&psd=admin failed for 183.83.107.198, reason: 
+"httpd_file: Can't access /home/ec2-user/.tsung/log/20210311-0154/boaform/admin/formLogin: File not found"
+[11/Mar/2021:02:13:21 -0000], Server: tsung_controller, Protocol: HTTP, Transport: TCP, URI: /boaform/admin/formLogin?username=admin&psd=admin, Host: 172.31.45.17:8091, Peer: 183.83.107.198:38996, Reason: [{statuscode,404},{description,"Object Not Found"}]
+[11/Mar/2021:03:35:43 -0000], Server: tsung_controller, Protocol: HTTP, Transport: TCP, Host: 172.31.45.17:8091, Peer: 163.172.161.118:58440, Reason: [{statuscode,501},{description,"Not Implemented"},{details,{not_sup,{"CONNECT","www.bing.com:443","HTTP/1.1"}}}]
+[11/Mar/2021:03:35:43 -0000], Server: tsung_controller, Protocol: HTTP, Transport: TCP, URI: /b06a5cea3df546d53e9e5949628cf311f8524e5f86fcfd7215246f6b48e23c0d24bfc19c12a7ef8e80b4250015b97a3b99e70c7567aa42330932cd737a6edc403eaca4a934ff104033095592a2a3396bf3cd7e1204c1f3934e24589074a45dd9, Host: 172.31.45.17:8091, Peer: 163.172.161.118:58592, Reason: [{statuscode,501},{description,"Not Implemented"}]
