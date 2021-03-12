@@ -1,0 +1,3802 @@
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) Config server started, logdir is "/home/ec2-user/.tsung/log/20210312-0857"
+ 
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+              ts_mon:(5:<0.110.0>) starting monitor, global 
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+           ts_config:(5:<0.127.0>) Reading config file: tsung_complete.xml
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+           ts_config:(5:<0.127.0>) Session name for id 1 is "browse_test"
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+           ts_config:(5:<0.127.0>) Session name for id 2 is "profile_test"
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+           ts_config:(5:<0.127.0>) Session name for id 3 is "join_test"
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+           ts_config:(5:<0.127.0>) Session name for id 4 is "create_test"
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+           ts_config:(5:<0.127.0>) Session name for id 5 is "comment_test"
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+           ts_config:(5:<0.127.0>) Session name for id 6 is "search"
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(4:<0.127.0>) SYSINFO:Tsung version: 1.7.0
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(4:<0.127.0>) SYSINFO:Erlang version: Erlang/OTP 22 [erts-10.6] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:8] [hipe]
+
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(4:<0.127.0>) SYSINFO:System architecture x86_64-redhat-linux-gnu
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(4:<0.127.0>) SYSINFO:Current path: /usr/lib/tsung/tsung-1.7.0/ebin/tsung.beam
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+              ts_mon:(5:<0.128.0>) Activate clients with text backend
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+              ts_mon:(5:<0.128.0>) Starting tsung clients on hosts: [localhost]
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) Start a launcher on the controller beam localhost
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+  ts_launcher_static:(5:<0.182.0>) Launch msg receive ("localhost")
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+         ts_launcher:(5:<0.183.0>) Launch msg receive ("localhost")
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) New arrival phase 1 for client "localhost" (last ? true): will start 30 users
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) New arrival phase 2 for client "localhost" (last ? true): will start 60 users
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) New arrival phase 3 for client "localhost" (last ? true): will start 120 users
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) New arrival phase 4 for client "localhost" (last ? true): will start 240 users
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) New arrival phase 5 for client "localhost" (last ? true): will start 480 users
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) New arrival phase 6 for client "localhost" (last ? true): will start 960 users
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) New arrival phase 7 for client "localhost" (last ? true): will start 1920 users
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) New arrival phase 8 for client "localhost" (last ? true): will start 3840 users
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) New arrival phase 9 for client "localhost" (last ? true): will start 7680 users
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+    ts_config_server:(5:<0.127.0>) New arrival phase 10 for client "localhost" (last ? true): will start 15360 users
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+         ts_launcher:(5:<0.183.0>) Expected duration of first phase: 30.0 sec (30 users) 
+
+=INFO REPORT==== 12-Mar-2021::08:57:29 ===
+         ts_launcher:(5:<0.183.0>) Activate launcher (30 users) in 1991 msec 
+
+=INFO REPORT==== 12-Mar-2021::08:58:01 ===
+         ts_launcher:(5:<0.183.0>) Phase duration exceeded, but not all users were launched (9 users, 30.0% of phase)
+
+=INFO REPORT==== 12-Mar-2021::08:58:01 ===
+         ts_launcher:(5:<0.183.0>) Start a new arrival phase (60 users, 0.002); expected duration=30.0 sec
+
+=INFO REPORT==== 12-Mar-2021::08:58:32 ===
+         ts_launcher:(4:<0.183.0>) Phase duration exceeded, more than 20% (26.7%) of users were not launched in time (16 users), tsung may be overloaded !
+
+=INFO REPORT==== 12-Mar-2021::08:58:32 ===
+         ts_launcher:(5:<0.183.0>) Start a new arrival phase (120 users, 0.004); expected duration=30.0 sec
+
+=INFO REPORT==== 12-Mar-2021::08:59:00 ===
+         ts_launcher:(4:<0.183.0>) Need to wait 1.514 sec before changing phase, going to sleep
+
+=INFO REPORT==== 12-Mar-2021::08:59:02 ===
+         ts_launcher:(5:<0.183.0>) Waking up
+
+=INFO REPORT==== 12-Mar-2021::08:59:02 ===
+         ts_launcher:(5:<0.183.0>) Start a new arrival phase (240 users, 0.008); expected duration=30.0 sec
+
+=INFO REPORT==== 12-Mar-2021::08:59:32 ===
+         ts_launcher:(5:<0.183.0>) Phase duration exceeded, but not all users were launched (5 users, 2.1% of phase)
+
+=INFO REPORT==== 12-Mar-2021::08:59:32 ===
+         ts_launcher:(5:<0.183.0>) Start a new arrival phase (480 users, 0.016); expected duration=30.0 sec
+
+=INFO REPORT==== 12-Mar-2021::09:00:01 ===
+         ts_launcher:(4:<0.183.0>) Need to wait 0.595 sec before changing phase, going to sleep
+
+=INFO REPORT==== 12-Mar-2021::09:00:02 ===
+         ts_launcher:(5:<0.183.0>) Waking up
+
+=INFO REPORT==== 12-Mar-2021::09:00:02 ===
+         ts_launcher:(5:<0.183.0>) Start a new arrival phase (960 users, 0.032); expected duration=30.0 sec
+
+=INFO REPORT==== 12-Mar-2021::09:00:32 ===
+         ts_launcher:(5:<0.183.0>) Phase duration exceeded, but not all users were launched (11 users, 1.1% of phase)
+
+=INFO REPORT==== 12-Mar-2021::09:00:32 ===
+         ts_launcher:(5:<0.183.0>) Start a new arrival phase (1920 users, 0.064); expected duration=30.0 sec
+
+=INFO REPORT==== 12-Mar-2021::09:01:02 ===
+         ts_launcher:(5:<0.183.0>) Phase duration exceeded, but not all users were launched (32 users, 1.7% of phase)
+
+=INFO REPORT==== 12-Mar-2021::09:01:02 ===
+         ts_launcher:(5:<0.183.0>) Start a new arrival phase (3840 users, 0.128); expected duration=30.0 sec
+
+=INFO REPORT==== 12-Mar-2021::09:01:32 ===
+         ts_launcher:(5:<0.183.0>) Phase duration exceeded, but not all users were launched (137 users, 3.6% of phase)
+
+=INFO REPORT==== 12-Mar-2021::09:01:32 ===
+         ts_launcher:(5:<0.183.0>) Start a new arrival phase (7680 users, 0.256); expected duration=30.0 sec
+
+=INFO REPORT==== 12-Mar-2021::09:01:49 ===
+           ts_search:(5:<0.9860.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:49 ===
+           ts_search:(5:<0.10096.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:49 ===
+           ts_search:(5:<0.9887.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.9835.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.9714.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.10176.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.9544.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.9943.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.10089.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.9564.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.10414.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.9548.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.10434.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:50 ===
+           ts_search:(5:<0.10179.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.9541.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.9361.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.10253.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.10309.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.9785.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.10302.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.9602.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.9520.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.9506.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.11019.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.10439.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.10522.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:51 ===
+           ts_search:(5:<0.10330.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:52 ===
+           ts_search:(5:<0.10112.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:52 ===
+           ts_search:(5:<0.10556.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:52 ===
+           ts_search:(5:<0.10145.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:52 ===
+           ts_search:(5:<0.10255.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:52 ===
+           ts_search:(5:<0.10597.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:52 ===
+           ts_search:(5:<0.12320.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:52 ===
+           ts_search:(5:<0.9963.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:52 ===
+           ts_search:(5:<0.9728.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.9584.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.9589.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.11287.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.10613.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.10994.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.9619.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.10475.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.10828.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.9800.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.12280.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.12284.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.10648.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.11318.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.12555.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.10502.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:53 ===
+           ts_search:(5:<0.10588.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.10674.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.11274.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.10536.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.11711.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.9644.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.11644.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.10425.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.12706.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.10937.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.10385.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.9945.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.9821.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.10056.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.10571.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.11522.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.9854.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.11754.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.10304.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:54 ===
+           ts_search:(5:<0.9938.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:55 ===
+           ts_search:(5:<0.10775.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:55 ===
+           ts_search:(5:<0.11729.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:55 ===
+           ts_search:(5:<0.10998.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:55 ===
+           ts_search:(5:<0.9857.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:55 ===
+           ts_search:(5:<0.10391.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:55 ===
+           ts_search:(5:<0.10525.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:55 ===
+           ts_search:(5:<0.12699.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:55 ===
+           ts_search:(5:<0.12857.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:55 ===
+           ts_search:(5:<0.10866.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:55 ===
+           ts_search:(5:<0.13003.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.11897.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.13007.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.11073.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.11236.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.11061.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.11023.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.10500.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.11924.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.11107.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.12891.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.10958.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.10898.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.11315.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.10901.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.12984.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.12276.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.10314.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.10923.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.10260.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:56 ===
+           ts_search:(5:<0.12407.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.12327.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.11759.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.12012.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.11002.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.13255.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.11602.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.10355.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.11212.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.10449.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.10406.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.13535.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.12333.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.11054.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.11395.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.11279.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.12187.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.11213.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.11900.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.11363.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.13281.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.12486.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.13300.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:57 ===
+           ts_search:(5:<0.13667.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.12406.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.10443.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.10256.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.10842.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.10979.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.12151.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.11651.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.11418.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.10951.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.11443.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.12224.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.11703.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.10856.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.11611.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.12588.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.11311.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.12076.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.13726.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.11737.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.12780.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.12139.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.13552.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.13563.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.12509.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:58 ===
+           ts_search:(5:<0.13874.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.12115.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.12331.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.11732.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.12501.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.12519.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.12484.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.10767.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.13902.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.12515.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.14065.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:01:59 ===
+           ts_search:(5:<0.13877.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.13079.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.11419.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.13069.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.12598.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.12520.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.10803.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.10695.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.11487.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.13910.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.11741.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.12840.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.11717.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.11704.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.11750.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.12149.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.13111.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.13228.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:00 ===
+           ts_search:(5:<0.11716.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.13587.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.13170.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.11001.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.12270.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.11858.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.10905.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.13531.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.13053.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.11921.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.13066.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.13026.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.11226.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.12427.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.14342.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:01 ===
+           ts_search:(5:<0.12572.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.13933.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.11295.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.12760.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.12349.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.13404.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.13139.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.14367.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+         ts_launcher:(5:<0.183.0>) Phase duration exceeded, but not all users were launched (344 users, 4.5% of phase)
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+         ts_launcher:(5:<0.183.0>) Start a new arrival phase (15360 users, 0.512); expected duration=30.0 sec
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.13617.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.14680.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.13819.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.13510.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.12326.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.12299.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.13559.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.14671.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.13836.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.13192.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:02 ===
+           ts_search:(5:<0.12303.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.12953.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.14679.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.13491.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.11635.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.13671.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.13719.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.14938.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.13899.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.12455.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.13888.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.11526.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.12470.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.11689.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.14275.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.13988.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.13212.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.12736.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.14323.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.12673.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.14924.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:03 ===
+           ts_search:(5:<0.14321.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.14705.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.12987.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.15152.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.12934.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.13422.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.15243.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.14827.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.14203.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.12618.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.13778.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.13217.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.15436.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.14247.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.14123.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.15183.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.15737.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.13451.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:04 ===
+           ts_search:(5:<0.14292.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.14263.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.12567.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.13051.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.14302.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.13519.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.12215.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15254.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.14241.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.13302.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15659.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15891.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15224.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.13711.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.16009.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15828.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.16021.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15184.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15756.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15653.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.13398.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15947.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.16120.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.13613.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.12077.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15406.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15510.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15720.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15847.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.16073.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.15404.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.14547.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:05 ===
+           ts_search:(5:<0.14580.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.14845.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.12576.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.13309.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.13421.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.14622.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.16083.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.14895.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.13791.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.16041.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.16380.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.14457.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.16113.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.14910.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.14775.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.16461.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.13557.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.14903.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.12304.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.15880.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.15464.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.13820.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.13121.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.14742.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.16047.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.13757.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.16419.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.14108.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.13166.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.16004.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:06 ===
+           ts_search:(5:<0.15873.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.15315.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.13731.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.14468.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.15176.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.16693.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.14959.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.16028.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.14704.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.14998.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.14796.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.16525.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.13834.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.13896.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.14721.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.15487.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.15287.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.14498.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.13889.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.16549.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.14861.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.16389.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.14999.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.16974.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.16802.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.17386.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:07 ===
+           ts_search:(5:<0.15229.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.16898.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.16984.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15084.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.13586.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.14073.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.12423.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.16780.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.17224.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.16951.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.14244.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15369.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15533.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.14392.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.16602.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.14388.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15995.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.17584.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15399.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15519.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15610.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.16666.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.17650.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.13704.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.14578.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.12721.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15473.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.16151.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.17467.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15209.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.13944.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15647.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.17417.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.17042.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15003.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15959.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.16186.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.17581.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.14016.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.17644.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.13879.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.14570.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:08 ===
+           ts_search:(5:<0.15326.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.15849.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17787.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17257.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17714.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17695.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17068.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.16283.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.15171.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17553.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.16568.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.16825.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.16030.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.12992.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.14135.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.14256.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17390.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17931.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.16122.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.15732.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17747.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.16201.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17901.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17442.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17565.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17273.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17895.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17377.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.14594.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.13958.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17523.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17575.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17599.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.16327.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.18086.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.16031.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17586.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.16137.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.16363.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:09 ===
+           ts_search:(5:<0.17015.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16097.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14792.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14451.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16202.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16437.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14281.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.18182.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16749.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.17658.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16117.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14880.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16641.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.17048.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16049.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.18155.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14609.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.15858.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14769.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16444.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.15930.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.17199.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.17454.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16824.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.15577.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16017.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.13962.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14691.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.15925.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14893.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.18427.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.13868.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14339.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14786.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14438.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16124.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.15691.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16570.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.17737.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16727.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16922.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.17886.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16834.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16260.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.14503.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.18600.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.18004.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16925.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.17070.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:10 ===
+           ts_search:(5:<0.16572.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.16851.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.16364.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18168.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18437.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18569.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17583.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18817.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17067.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.14961.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.15393.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.14858.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18568.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.13640.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17827.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.14783.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18847.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17671.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18243.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.14558.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.16440.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18719.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.16194.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18801.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17708.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17155.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18906.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.16651.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17242.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17701.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17079.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18659.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.19112.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18501.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18734.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.14109.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17194.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.18713.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:11 ===
+           ts_search:(5:<0.17198.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.18915.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.19199.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.18533.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.18824.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.18546.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.16595.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.18948.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.17345.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.17624.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.18826.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.19202.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.15787.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.19501.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.19210.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.19335.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.17879.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.18003.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.17057.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.19157.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.15296.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.17908.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.17123.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:12 ===
+           ts_search:(5:<0.19583.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19192.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.18026.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.17605.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19260.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.16214.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19513.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19537.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.15292.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.16451.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.15888.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.14921.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19328.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.17420.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.16557.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.18054.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19757.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.17889.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19404.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.18227.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19037.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.16376.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.16422.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19597.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19287.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19294.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.17090.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19387.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.17985.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.17842.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19793.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.18223.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.15800.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.18146.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.17976.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.18376.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19610.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19650.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.17085.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.15752.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19216.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.16904.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.19819.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.13972.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.17238.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.16353.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.17775.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:13 ===
+           ts_search:(5:<0.16295.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.19291.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.16003.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.15298.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.17159.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.16125.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.18666.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.15419.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.20021.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.17809.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.18133.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.19952.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.16696.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.15617.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.19970.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.20032.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.18275.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.15253.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.18270.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.16409.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.17930.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.18269.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.16436.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.19667.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.20326.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.17926.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.19798.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.19936.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.18363.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.18846.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.18622.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.18060.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.15339.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.20406.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:14 ===
+           ts_search:(5:<0.20259.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18005.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.16638.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18598.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.17217.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.17500.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.19368.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.20206.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18307.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18613.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18543.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.20583.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.20233.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.19994.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18855.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18623.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18237.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18839.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18234.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.20505.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.17720.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18183.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.17371.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18878.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.19003.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18934.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.20514.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18949.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18229.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.15407.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.20695.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.17954.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.20367.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.17437.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.18669.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.20353.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:15 ===
+           ts_search:(5:<0.16358.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.19015.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.17181.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.15727.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.19061.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20396.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20550.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.18941.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.17461.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20556.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.19254.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20444.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.18936.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.15320.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.15681.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20562.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.17365.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.21144.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20492.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.17456.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.19380.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.18135.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.19027.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20669.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.19677.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.19591.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20742.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.17121.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20647.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20935.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.20621.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.19613.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:16 ===
+           ts_search:(5:<0.21183.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.17980.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.20629.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.15462.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.20808.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.17824.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.21045.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.19694.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.21516.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.19740.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.18246.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.17426.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.21415.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.19175.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.21243.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.19405.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.20335.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.21293.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.21116.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.19485.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.17258.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.18844.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.16057.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.19709.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.21110.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.18746.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:17 ===
+           ts_search:(5:<0.19874.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.18131.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21783.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21210.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.20575.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21863.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21908.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21597.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21663.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.22143.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21751.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.20179.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.18792.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.20037.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21814.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.22227.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.22126.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.20608.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.18434.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.20949.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21867.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.20317.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21493.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.18338.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.19976.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.18099.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.19186.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.22279.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21896.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.20483.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.21903.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.19215.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.22412.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.20671.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.20522.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:18 ===
+           ts_search:(5:<0.22405.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.20685.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.20453.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.19913.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.22434.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.21683.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.20188.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.18641.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.22463.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.17502.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.21977.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.18862.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.19903.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.20965.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.19229.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.19058.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.21778.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.22567.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.22092.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.19698.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.16365.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.22043.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.20584.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.19079.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:19 ===
+           ts_search:(5:<0.22281.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.18658.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22867.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22732.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.20122.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22372.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22558.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22877.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.19502.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22251.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.20992.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22552.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.21375.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.21351.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22648.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22769.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22578.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.20553.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22735.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22913.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.23091.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22571.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22939.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.19491.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.20516.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22808.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.23077.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22517.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.19499.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22901.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.17797.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.19790.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.19973.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.19107.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.20399.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.19164.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.19498.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.20043.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:20 ===
+           ts_search:(5:<0.22895.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.23088.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.21532.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.22831.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.23272.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.20866.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.19987.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.22611.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.19239.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.21758.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.20823.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.23306.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.21476.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.22881.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.23150.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.22179.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.23298.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.19923.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.23454.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.23315.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.21348.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.21043.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.21373.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.21880.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.21471.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.22934.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.19768.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.20567.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.18960.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.20138.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.20969.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.20129.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.21443.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:21 ===
+           ts_search:(5:<0.23203.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.22130.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23313.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23067.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23288.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.20064.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.21708.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23798.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.22105.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23119.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23039.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23814.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.20568.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23104.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.22204.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.18683.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.20356.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23987.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23276.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.21593.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.22008.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.24070.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.21890.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.21486.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.22277.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.22128.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23377.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.23533.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.21970.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.21726.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:22 ===
+           ts_search:(5:<0.22348.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.20515.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.22804.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.23686.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.23437.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.20484.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.23853.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.20346.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.24211.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.20956.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.22356.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.21852.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.22674.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.24176.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.22190.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.18796.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.21424.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.20770.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.22188.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.22230.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.20970.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.24114.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.22686.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.22171.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.24214.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.22866.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.22659.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.21864.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:23 ===
+           ts_search:(5:<0.21533.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.22374.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.24039.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.20697.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.24158.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.22154.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.23023.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.19389.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.24770.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.22457.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.19449.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.23072.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.23027.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.22377.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.24687.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.24424.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.22892.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.24488.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.24712.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.24550.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.24216.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.22756.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.22770.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.21028.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.21888.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.24971.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:24 ===
+           ts_search:(5:<0.23736.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.20163.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.21159.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.24338.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.21608.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.23765.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.22616.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.24565.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.22882.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.24526.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.25216.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.24782.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.21689.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.23185.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.23699.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.21537.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.22789.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.22664.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.20355.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.24015.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.23802.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:25 ===
+           ts_search:(5:<0.22420.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.21937.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.23405.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25533.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25569.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.21505.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25693.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.24999.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.23717.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25468.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.20443.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.23718.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25045.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.23342.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.21826.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.24076.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25335.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.24146.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.24054.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25309.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.23557.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25973.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25507.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25799.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:26 ===
+           ts_search:(5:<0.25274.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.22415.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25285.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.26028.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.24319.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25894.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.23163.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25801.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.23181.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25917.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.24164.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.24251.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25553.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25554.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.24718.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.23503.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.21240.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.24186.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25406.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.23972.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.24463.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.26133.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.22477.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25531.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.23571.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25539.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.24231.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.24008.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.23330.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25511.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.23301.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.23835.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.26109.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.26336.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.24416.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.24294.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.25895.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.23794.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:27 ===
+           ts_search:(5:<0.26390.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26381.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26559.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.22988.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.22692.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.24558.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.24729.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26140.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.25053.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.24316.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.22915.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26581.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26483.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.25952.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.24289.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.25093.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26229.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26197.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26555.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.23257.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.25354.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.25016.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.24451.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.25299.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.24330.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26707.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26530.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.25150.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26521.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26812.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:28 ===
+           ts_search:(5:<0.26820.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.26941.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.23614.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.23944.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.23408.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.26330.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.25266.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.26985.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.22503.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.26666.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.23434.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.25199.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.24395.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.24352.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.26938.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.26891.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.25201.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.26954.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.25021.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.23850.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.25381.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.26626.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.23705.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.25037.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.24805.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.21340.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.27284.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.25706.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.25291.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.27361.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.27222.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:29 ===
+           ts_search:(5:<0.24075.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27247.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.26640.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27403.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27025.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.25510.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.25965.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27225.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.24726.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27423.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27002.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.26990.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.25614.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.23595.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.23994.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.26779.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.22164.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.26771.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.25908.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.26814.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.26100.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.25157.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.26919.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27616.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.25344.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.25515.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27496.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.25628.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27521.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27112.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.24120.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27114.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.25587.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.26167.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27700.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27512.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.27862.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.26221.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:30 ===
+           ts_search:(5:<0.22787.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25305.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25401.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.27938.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.27120.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25118.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.27593.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25225.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.27420.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.23470.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.26880.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.27702.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25846.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.26987.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.27682.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25982.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25896.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.27741.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25790.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.27558.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.27478.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.26149.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.22257.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25598.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25888.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25633.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.24101.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.24879.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.28283.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.26044.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25936.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.23387.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25960.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.28082.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.28090.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.24156.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.24323.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:31 ===
+           ts_search:(5:<0.25963.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.25858.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.28076.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.25673.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.26529.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.25815.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.26300.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.26993.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.28107.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.26316.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.24902.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.24457.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+         ts_launcher:(5:<0.183.0>) Phase duration exceeded, but not all users were launched (1369 users, 8.9% of phase)
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+         ts_launcher:(5:<0.183.0>) This was the last phase, wait for connected users to finish their session
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+     ts_launcher_mgr:(5:<0.176.0>) Still 5635 active client(s)
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.26126.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.26170.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.28316.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.27801.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.22305.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.25235.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.26833.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.26977.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.25002.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.25485.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.27975.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.26454.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:32 ===
+           ts_search:(5:<0.26983.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.24996.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.22722.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.25365.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.28572.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.26179.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.28757.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.26602.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.27295.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.26200.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.26500.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.27471.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.27309.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.28643.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.28849.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.26928.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.28394.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.26103.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.24240.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.27638.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.25215.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.27343.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.27597.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.25707.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.28472.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.26830.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:33 ===
+           ts_search:(5:<0.28894.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.27603.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.28963.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.27505.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.27355.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.26802.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.25688.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.28776.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.26963.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.27200.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.28942.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.25164.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.26488.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:34 ===
+           ts_search:(5:<0.25913.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:35 ===
+           ts_search:(5:<0.27977.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:35 ===
+           ts_search:(5:<0.26759.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:35 ===
+           ts_search:(5:<0.27533.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:35 ===
+           ts_search:(5:<0.27240.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:35 ===
+           ts_search:(5:<0.24872.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:35 ===
+           ts_search:(5:<0.26691.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:36 ===
+           ts_search:(5:<0.27738.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:36 ===
+           ts_search:(5:<0.28561.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:36 ===
+           ts_search:(5:<0.28710.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:37 ===
+           ts_search:(5:<0.28930.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:37 ===
+           ts_search:(5:<0.28886.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:37 ===
+           ts_search:(5:<0.27960.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:38 ===
+           ts_search:(5:<0.28109.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:02:38 ===
+           ts_search:(5:<0.28893.0>) Dyn Var (RE): no Match (varname=redirect), 
+
+=INFO REPORT==== 12-Mar-2021::09:03:32 ===
+     ts_launcher_mgr:(5:<0.176.0>) No more active users 'tsung_controller@ip-172-31-8-98' "2902"
