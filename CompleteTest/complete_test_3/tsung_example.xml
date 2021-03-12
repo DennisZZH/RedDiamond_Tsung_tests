@@ -1,6 +1,4 @@
-<?xml version="1.0"?>
-<!DOCTYPE tsung SYSTEM "/usr/local/share/tsung/tsung-1.0.dtd" [] >
-<tsung loglevel="notice">
+<?xml version="1.0"?><tsung loglevel="notice">
   <clients>
     <client host="localhost" maxusers="32768" use_controller_vm="true"/>
   </clients>
@@ -33,12 +31,6 @@
     </arrivalphase>
     <arrivalphase phase="8" duration="30" unit="second">
       <users arrivalrate="128" unit="second"/>
-    </arrivalphase>
-    <arrivalphase phase="9" duration="30" unit="second">
-      <users arrivalrate="256" unit="second"/>
-    </arrivalphase>
-    <arrivalphase phase="10" duration="30" unit="second">
-      <users arrivalrate="512" unit="second"/>
     </arrivalphase>
   </load>
 
@@ -107,63 +99,43 @@
 
     <session name="profile_test" type="ts_http" weight="20">
 
-      <!-- 1. User browses to the main page -->
       <request>
-        <http method="GET" url="/"></http>
+        <http method="GET" url="/"/>
       </request>
 
-      <!-- 2. User Logs in -->
-      <!-- sets dynamic variables from csv list with id userlist -->
       <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
         <var name="user_name"/>
         <var name="user_email"/>
         <var name="user_password"/>
       </setdynvars>
 
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(user_email,DynVars),
-                            http_uri:encode(Val) end.">
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_email,DynVars),                             http_uri:encode(Val) end.">
         <var name="encoded_user_email"/>
       </setdynvars>
 
-      <!-- parses dynamic variables user_email, user_password and authenticity_token to url-encoded variables -->
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(user_email,DynVars),
-                            http_uri:encode(Val) end.">
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_email,DynVars),                             http_uri:encode(Val) end.">
         <var name="encoded_user_email"/>
       </setdynvars>
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(user_password,DynVars),
-                            http_uri:encode(Val) end.">
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_password,DynVars),                             http_uri:encode(Val) end.">
         <var name="encoded_user_password"/>
       </setdynvars>
 
-      <!-- thinktime of user is random but between 2 and 5 seconds -->
       <thinktime random="true" min="2" max="5"/>
 
       <request subst="true">
-        <!-- sets encoded dynamic variables for authenticity_token, user-email and user-password-->
-        <http url='/users/sign_in' version='1.1'
-              contents='authenticity_token=null&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in'
-              content_type='application/x-www-form-urlencoded'
-              method='POST'>
-          <http_header name='Accept-Encoding' value='gzip, deflate'/>
+        <http url="/users/sign_in" version="1.1" contents="authenticity_token=null&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in" content_type="application/x-www-form-urlencoded" method="POST">
+          <http_header name="Accept-Encoding" value="gzip, deflate"/>
         </http>
       </request>
 
-      <!-- 3. User browses to a game page -->
       <setdynvars sourcetype="random_number" start="1" end="5">
         <var name="game_id"/>
       </setdynvars>
 
       <request subst="true">
-        <http method="GET" url="/games/%%_game_id%%/groups"></http>
+        <http method="GET" url="/games/%%_game_id%%/groups"/>
       </request>
 
-      <!-- 4. User browses to a group -->
       <thinktime random="true" min="2" max="5"/>
 
       <if var="game_id" eq="1">
@@ -191,12 +163,10 @@
           <var name="group_id"/>
         </setdynvars>
       </if>
-      <!-- The group_id is unique for different games. So when using group_id from 1 to 1000, only use gameid: 1 -->
       <request subst="true">
-        <http method="GET" url="/games/%%_game_id%%/groups/%%_group_id%%"></http>
+        <http method="GET" url="/games/%%_game_id%%/groups/%%_group_id%%"/>
       </request>
 
-      <!-- 5. User browses user profiles page -->
       <thinktime random="true" min="2" max="5"/>
       <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
         <var name="userx_name"/>
@@ -204,28 +174,24 @@
         <var name="userx_password"/>
       </setdynvars>
       <request subst="true">
-        <http method="GET" url="/profile/%%_userx_name%%"></http>
+        <http method="GET" url="/profile/%%_userx_name%%"/>
       </request>
 
-      <!-- 6. Browes to self page -->
       <thinktime random="true" min="2" max="5"/>
       <request subst="true">
-        <http method="GET" url="/profile/%%_user_name%%"></http>
+        <http method="GET" url="/profile/%%_user_name%%"/>
       </request>
       <request subst="true">
-        <http method="GET" url="/profile/%%_user_name%%/edit"></http>
+        <http method="GET" url="/profile/%%_user_name%%/edit"/>
       </request>
 
-      <!-- 7. User changes bio -->
       <thinktime random="true" min="2" max="5"/>
       <request subst="true">
-        <http method="POST" url="/profile/%%_user_name%%" version='1.1'
-              contents='_method=patch&amp;authenticity_token=null&amp;user%5Bbio%5D=BIOBIO&amp;commit=Update+User'
-              content_type='application/x-www-form-urlencoded'></http>
+        <http method="POST" url="/profile/%%_user_name%%" version="1.1" contents="_method=patch&amp;authenticity_token=null&amp;user%5Bbio%5D=BIOBIO&amp;commit=Update+User" content_type="application/x-www-form-urlencoded"/>
       </request>
 
       <request subst="true">
-        <http method="GET" url="/profile/%%_user_name%%"></http>
+        <http method="GET" url="/profile/%%_user_name%%"/>
       </request>
 
     </session>
@@ -236,68 +202,56 @@
       <request><http method="GET" url="/"/></request>
 
       <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
-        <var name="user_name" />
-        <var name="user_email" />
-        <var name="user_password" />
+        <var name="user_name"/>
+        <var name="user_email"/>
+        <var name="user_password"/>
       </setdynvars>
 
        <setdynvars sourcetype="random_number" start="1" end="5">
-        <var name="game_id" />
+        <var name="game_id"/>
       </setdynvars>
 
       <if var="game_id" eq="1">
         <setdynvars sourcetype="random_number" start="1" end="1000">
-          <var name="group_id_1" />
-          <var name="group_id_2" />
+          <var name="group_id_1"/>
+          <var name="group_id_2"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="2">
         <setdynvars sourcetype="random_number" start="1001" end="2000">
-          <var name="group_id_1" />
-          <var name="group_id_2" />
+          <var name="group_id_1"/>
+          <var name="group_id_2"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="3">
         <setdynvars sourcetype="random_number" start="2001" end="3000">
-          <var name="group_id_1" />
-          <var name="group_id_2" />
+          <var name="group_id_1"/>
+          <var name="group_id_2"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="4">
         <setdynvars sourcetype="random_number" start="3001" end="4000">
-          <var name="group_id_1" />
-          <var name="group_id_2" />
+          <var name="group_id_1"/>
+          <var name="group_id_2"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="5">
         <setdynvars sourcetype="random_number" start="4001" end="5000">
-          <var name="group_id_1" />
-          <var name="group_id_2" />
+          <var name="group_id_1"/>
+          <var name="group_id_2"/>
         </setdynvars>
       </if>
 
-      <!-- parses dynamic variables user_email, user_password and authenticity_token to url-encoded variables -->
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(user_email,DynVars),
-                            http_uri:encode(Val) end.">
-        <var name="encoded_user_email" />
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_email,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_user_email"/>
       </setdynvars>
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(user_password,DynVars),
-                            http_uri:encode(Val) end.">
-        <var name="encoded_user_password" />
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_password,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_user_password"/>
       </setdynvars>
 
-      <!-- for using dynamic variables the request has to be subst="true"-->
       <request subst="true">
-        <!-- sets encoded dynamic variables for authenticity_token, user-email and user-password-->
-        <http url='/users/sign_in' version='1.1'
-              contents='authenticity_token=null&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in'
-              content_type='application/x-www-form-urlencoded'
-              method='POST'>
-          <http_header name='Accept-Encoding' value='gzip, deflate' />
+        <http url="/users/sign_in" version="1.1" contents="authenticity_token=null&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in" content_type="application/x-www-form-urlencoded" method="POST">
+          <http_header name="Accept-Encoding" value="gzip, deflate"/>
         </http>
       </request>
 
@@ -309,7 +263,6 @@
       <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups/%%_group_id_1%%"/></request>
       <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"/></request>
 
-      <!-- user look for a group for 1 and 3 seconds -->
       <thinktime random="true" min="1" max="3"/>
 
       <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups/%%_group_id_2%%"/></request>
@@ -400,137 +353,103 @@
 
     <session name="comment_test" type="ts_http" weight="15">
 
-       <!-- 1. User browses to the mainpage -->
-      <request><http method="GET" url="/"></http></request>
+       <request><http method="GET" url="/"/></request>
 
       <setdynvars sourcetype="file" fileid="userlist" delimiter=";" order="random">
-        <var name="user_name" />
-        <var name="user_email" />
-        <var name="user_password" />
+        <var name="user_name"/>
+        <var name="user_email"/>
+        <var name="user_password"/>
       </setdynvars>
 
       <setdynvars sourcetype="random_number" start="1" end="5">
-        <var name="game_id" />
+        <var name="game_id"/>
       </setdynvars>
 
       <if var="game_id" eq="1">
         <setdynvars sourcetype="random_number" start="1" end="1000">
-          <var name="group_id" />
+          <var name="group_id"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="2">
         <setdynvars sourcetype="random_number" start="1001" end="2000">
-          <var name="group_id" />
+          <var name="group_id"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="3">
         <setdynvars sourcetype="random_number" start="2001" end="3000">
-          <var name="group_id" />
+          <var name="group_id"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="4">
         <setdynvars sourcetype="random_number" start="3001" end="4000">
-          <var name="group_id" />
+          <var name="group_id"/>
         </setdynvars>
       </if>
       <if var="game_id" eq="5">
         <setdynvars sourcetype="random_number" start="4001" end="5000">
-          <var name="group_id" />
+          <var name="group_id"/>
         </setdynvars>
       </if>
 
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(user_email,DynVars),
-                            http_uri:encode(Val) end.">
-        <var name="encoded_user_email" />
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_email,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_user_email"/>
       </setdynvars>
      
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(user_email,DynVars),
-                            http_uri:encode(Val) end.">
-        <var name="encoded_user_email" />
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_email,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_user_email"/>
       </setdynvars>
-      <setdynvars sourcetype="eval"
-                  code="fun({Pid,DynVars})->
-                            {ok,Val}=ts_dynvars:lookup(user_password,DynVars),
-                            http_uri:encode(Val) end.">
-        <var name="encoded_user_password" />
+      <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                             {ok,Val}=ts_dynvars:lookup(user_password,DynVars),                             http_uri:encode(Val) end.">
+        <var name="encoded_user_password"/>
       </setdynvars>
 
-      <!-- 2. User logs in -->
       <request subst="true">
-        <http url='/users/sign_in' version='1.1'
-          contents='authenticity_token=null&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in'
-          content_type='application/x-www-form-urlencoded'
-          method='POST'>
-          <http_header name='Accept-Encoding' value='gzip, deflate' />
+        <http url="/users/sign_in" version="1.1" contents="authenticity_token=null&amp;user%5Bemail%5D=%%_encoded_user_email%%&amp;user%5Bpassword%5D=%%_encoded_user_password%%&amp;user%5Bremember_me%5D=0&amp;commit=Log+in" content_type="application/x-www-form-urlencoded" method="POST">
+          <http_header name="Accept-Encoding" value="gzip, deflate"/>
         </http>
       </request>
 
       <thinktime random="true" min="2" max="5"/>
 
-      <!-- 3. User browses to a game page to see that game’s groups -->
-      <!-- The group_id is unique for different games. So when using group_id from 1 to 1000, only use gameid: 1 -->
-      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"></http></request>
-      <!-- 4. User browses to a group -->
-      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups/%%_group_id%%"></http></request>
+      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups"/></request>
+      <request subst="true"><http method="GET" url="/games/%%_game_id%%/groups/%%_group_id%%"/></request>
 
-      <!-- 5. User posts a comment on the group -->
       <request subst="true">
-          <!-- Comment on group-->
-          <http url='/games/%%_game_id%%/groups/%%_group_id%%/comments' version='1.1'
-            contents='authenticity_token=null&amp;comment%5Bbody%5D=test&amp;commit=Save+Comment'
-            content_type='application/x-www-form-urlencoded'
-            method='POST'>
-            <http_header name='Accept-Encoding' value='gzip, deflate' />
+          <http url="/games/%%_game_id%%/groups/%%_group_id%%/comments" version="1.1" contents="authenticity_token=null&amp;comment%5Bbody%5D=test&amp;commit=Save+Comment" content_type="application/x-www-form-urlencoded" method="POST">
+            <http_header name="Accept-Encoding" value="gzip, deflate"/>
           </http>
       </request>
 
       <thinktime random="true" min="1" max="3"/>
 
-      <!-- 6. Visit a random user's profile -->
-      <request subst="true"><http method="GET" url="/profile/%%_user_name%%"></http></request>
+      <request subst="true"><http method="GET" url="/profile/%%_user_name%%"/></request>
 
-      <!-- 7. User posts a comment on the user’s profile -->
       <request subst="true">
-          <!-- Comment on user-->
-          <http url='/profile/%%_user_name%%/comments' version='1.1'
-            contents='authenticity_token=null&amp;comment%5Bbody%5D=test&amp;commit=Save+Comment'
-            content_type='application/x-www-form-urlencoded'
-            method='POST'>
-            <http_header name='Accept-Encoding' value='gzip, deflate' />
+          <http url="/profile/%%_user_name%%/comments" version="1.1" contents="authenticity_token=null&amp;comment%5Bbody%5D=test&amp;commit=Save+Comment" content_type="application/x-www-form-urlencoded" method="POST">
+            <http_header name="Accept-Encoding" value="gzip, deflate"/>
           </http>
       </request>
 
-      <!-- 8. return to home page -->
       <request><http method="GET" url="/"/></request>
 
-      <!-- 9. Log out-->
       <request subst="true">
-      <http url='/users/sign_out' version='1.1'
-        contents='_method=delete&amp;authenticity_token=null&amp;'
-        content_type='application/x-www-form-urlencoded'
-        method='POST'>
-        <http_header name='Accept-Encoding' value='gzip, deflate' />
+      <http url="/users/sign_out" version="1.1" contents="_method=delete&amp;authenticity_token=null&amp;" content_type="application/x-www-form-urlencoded" method="POST">
+        <http_header name="Accept-Encoding" value="gzip, deflate"/>
       </http>
     </request>
     </session>
 
     <session name="search" type="ts_http" weight="10">
       <setdynvars sourcetype="file" fileid="pokemon" order="random">
-        <var name="term" />
+        <var name="term"/>
       </setdynvars>
       <setdynvars sourcetype="random_number" start="1" end="5">
         <var name="game_id"/>
       </setdynvars>
       <request subst="true">
-        <http method="GET" url="/games/%%_game_id%%/groups?search=%%_term%%"></http>
+        <http method="GET" url="/games/%%_game_id%%/groups?search=%%_term%%"/>
       </request>
     </session>
 
 
   </sessions>
 </tsung>
-
