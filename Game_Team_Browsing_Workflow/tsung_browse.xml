@@ -6,7 +6,7 @@
   </clients>
 
   <servers>
-    <server host="alex.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"/>
+    <server host="pagi-RedDiamond.eba-2ztxhtsv.us-west-2.elasticbeanstalk.com" port="80" type="tcp"/>
   </servers>
 
   <load>
@@ -34,18 +34,17 @@
     <arrivalphase phase="8" duration="30" unit="second">
       <users arrivalrate="128" unit="second"/>
     </arrivalphase>
-    <arrivalphase phase="9" duration="30" unit="second">
+    <!-- <arrivalphase phase="9" duration="30" unit="second">
       <users arrivalrate="256" unit="second"/>
     </arrivalphase>
     <arrivalphase phase="10" duration="30" unit="second">
       <users arrivalrate="512" unit="second"/>
-    </arrivalphase>
+    </arrivalphase> -->
   </load>
 
   <options>
     <!-- Set connection timeout to 2 seconds -->
     <option name="global_ack_timeout" value="2000"/>
-    <!-- adding csv file with user-email and user-password for login -->
   </options>
 
   <sessions>
